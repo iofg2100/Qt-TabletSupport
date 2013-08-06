@@ -3,7 +3,13 @@
 #include <QMouseEvent>
 #include <QDebug>
 
+#ifdef Q_OS_WIN
 #include "../tabletsupport.h"
+#endif
+
+#ifdef Q_OS_MAC
+#include "../tabletsupportmac.h"
+#endif
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
